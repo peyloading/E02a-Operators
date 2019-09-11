@@ -120,7 +120,7 @@ def substr(s,a1,a2):
     Returns a substring of s (from position a1 to a2)
     '''
     toReturn = ''
-    toReturn = 
+    toReturn = s[:2]
     return toReturn
 
 def reverseStr(s):
@@ -128,7 +128,7 @@ def reverseStr(s):
     Returns a string which is a reversed version of s
     '''
     toReturn = ''
-    # add your code here
+    toReturn = s[::-1]
     return toReturn
 
 def isIn(l,e):
@@ -136,15 +136,23 @@ def isIn(l,e):
     Returns true if element e is in list l
     '''
     toReturn = ''
-    # add your code here
-    return toReturn
+    def isIn(l,e):
+        l = [1,2,3,4]
+
+        if e in l:
+            toReturn = True
+        else:
+            toReturn = False
+        return toReturn
 
 def randomElement(l):
     '''
     Returns a random element of list l
     '''
     toReturn = ''
-    # add your code here
+    import random
+    #assigning variable w random element
+    toReturn = random.choice(l)
     return toReturn
 
 def randomNumber():
@@ -152,7 +160,7 @@ def randomNumber():
     Returns a random number between 1000 and 9999
     '''
     toReturn = 0
-    # add your code here
+    toReturn = (random.randrange(1000,9999))
     return toReturn
 
 def reverseList(l):
@@ -160,7 +168,7 @@ def reverseList(l):
     Returns a list which is a mirror of l (each element is present in reverse order from l)
     '''
     toReturn = []
-    # add your code here slicing 
+    print(l[::-1])
     return toReturn
 
 def shuffleList(l):
@@ -177,7 +185,12 @@ def listUntil(a):
     Returns a list contains numbers from 0 to a
     '''
     toReturn = []
-    # add your code here
+    l = []
+    b = 0
+    while b < a:
+        l.append(b)
+        b += 1
+    return l
     return toReturn
 
 
